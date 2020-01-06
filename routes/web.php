@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::any('/send',function (){
+    return $_GET("email");
+});
