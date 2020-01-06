@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::any('/send',function (){
+Route::get('/send',function (){
     return $_GET("email");
 });
