@@ -1,5 +1,5 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/send',function (){
-    return $_GET("email");
-});
+Route::get('/send','EmailController@sendEmail');
+Route::get('/all','EmailController@getAllEmails');
