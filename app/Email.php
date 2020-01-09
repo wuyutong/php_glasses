@@ -30,6 +30,11 @@ class Email extends Model
             $sp = $sp.($item->email).';
             ';
         }
-        return $sp;
+        if ($sp){
+            return '邮箱列表：'.$sp;
+        }else{
+            return '暂无数据';
+        }
+
     }
 }
